@@ -27,8 +27,16 @@ const Home = () => {
 
   return (
     <Container>
-      <Typography variant="h4" sx={{ mt: 3, mb: 2, textAlign: 'center' }}>
-        Latest AI News
+      <Typography
+        variant="h4"
+        sx={{
+          mt: 3,
+          mb: 2,
+          textAlign: 'center',
+          fontWeight: 'bold'
+        }}
+      >
+        Latest News
       </Typography>
 
       {/* Search Bar */}
@@ -36,7 +44,15 @@ const Home = () => {
         fullWidth
         label="Search News..."
         variant="outlined"
-        sx={{ mb: 3 }}
+        sx={{
+          mb: 3,
+          '& .MuiOutlinedInput-root': {
+            borderRadius: 2,
+          },
+          '& .MuiInputLabel-root': {
+            fontSize: '1rem',
+          },
+        }}
         onChange={e => setSearch(e.target.value)}
       />
 
@@ -60,7 +76,14 @@ const Home = () => {
         count={totalPages}
         page={page}
         onChange={(event, value) => setPage(value)}
-        sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}
+        sx={{
+          mt: 4,
+          display: 'flex',
+          justifyContent: 'center',
+          '& .MuiPaginationItem-root': {
+            fontWeight: 'bold',
+          },
+        }}
       />
     </Container>
   )

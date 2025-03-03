@@ -5,7 +5,16 @@ const Navbar = () => {
   return (
     <AppBar position="static" elevation={0}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1, textAlign: 'center' }}>
+        <Typography
+        variant="h6"
+        component="div"
+        sx={{
+          flexGrow: 1,
+          textAlign:'center',
+          fontWeight: 'bold',
+          letterSpacing: '1px',
+        }}
+        >
           AI News Summarizer
         </Typography>
       </Toolbar>
