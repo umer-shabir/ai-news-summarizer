@@ -36,7 +36,7 @@ const Home = () => {
           fontWeight: 'bold'
         }}
       >
-        Latest News
+        Latest AI News
       </Typography>
 
       {/* Search Bar */}
