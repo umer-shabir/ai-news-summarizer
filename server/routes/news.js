@@ -33,7 +33,7 @@ router.get('/fetch', async (req, res) => {
 
     res.json({ success: true, message: 'News updated successfully' })
   } catch (error) {
-    console.error('Error fetching news', error.message)
+    console.error('Error fetching news:', error.message)
     res.status(500).json({ success: false, message: 'Internal server error'})
   }
 })
@@ -55,7 +55,7 @@ router.get('/', async (req, res) => {
       news
     })
   } catch (error) {
-    console.error('Error retrieving news', error.message)
+    console.error('Error retrieving news:', error.message)
     res.status(500).json({ success: false, message: 'Internal server error' })
   }
 })

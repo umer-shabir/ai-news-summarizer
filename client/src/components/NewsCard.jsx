@@ -1,26 +1,19 @@
-import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material'
+import { Card, CardMedia, CardContent, Typography, Button } from '@mui/material'
 
-const NewsCard = ({ title, summary, imageUrl, url }) => {
-
+const NewsCard = ({ article }) => {
   return (
-    <Card sx={{ maxWidth: 400, mx: 'auto', boxShadow: 3 }}>
-      {/* Image */}
-      <CardMedia component="img" height="200" image={imageUrl} alt={title} />
-
-      {/* Content */}
+    <Card sx={{ maxWidth: 345, m: 'auto' }}>
+      <CardMedia component="img" height="200" image={article.imageUrl} alt={article.title} />
       <CardContent>
-        <Typography variant="h6" gutterBottom>
-          {title}
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          {summary}
+        <Typography variant="h6">{article.title}</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {article.summary}
         </Typography>
         <Button
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
           variant="contained"
           color="primary"
+          href={article.url}
+          target="_blank"
           sx={{ mt: 2 }}
         >
           Read More
