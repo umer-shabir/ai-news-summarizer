@@ -1,10 +1,11 @@
 import Navbar from './components/Navbar'
+import Home from './pages/Home'
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <h1>Welcome to AI News Summarizer</h1>
+      <Home />
     </>
   )
 }
